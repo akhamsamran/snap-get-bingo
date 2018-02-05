@@ -61,14 +61,28 @@ function loadBingoCard() {
 		}
 		html = html + "</tr>";
 	}
-
+	//is this an option?, but then you have to go put an element called snapAnswer into the HTML
+document.getElementById("snapAnswer").innerHTML = bingoCard[2];
 	document.getElementById("bingoCard").innerHTML = html;
 }
 /**
  * Task: get the contents of the top row, third column from Dylan's page/**
- I need to somehow get the contents of i === 1, j === 3
- i is a row, j is a column
- i is an attribute, j is ?
-
+ * I need to somehow get the contents of i === 1, j === 3
+ * i is a row, j is a column
+ * i is an attribute, j is ?
+ *
  **/
+//m approach is similar to Tristan's
+if (i === 0 &&& j=== 2) {
+	content ="";
+}
 
+/**
+ solution:
+ // captain Dylan works for any sort of tag
+ var cells = document.getElementsByClassName("table");
+ cells[0].children[0].children[0].children[2];
+
+ // Tristan only works for table tag
+ document.getElementById("bingoCard").rows[0].cells[2];
+ **/
